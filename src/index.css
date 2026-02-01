@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #F0F7FF 0%, #FFFFFF 50%, #F8FAFC 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+:root {
+  /* Цвета */
+  --color-primary: #40A3F8;
+  --color-secondary: #4A5568;
+  --color-white: #FFFFFF;
+  --color-text: #1e293b;
+
+  /* Шрифты */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+
+  /* Размеры */
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 3.75rem;
+
+  /* Шрифты */
+  --font-size-sm: 0.9375rem; /* 15px */
+  --font-size-md: 1.75rem;   /* 28px */
+  --font-size-lg: 2.5rem;    /* 40px */
+  --font-size-xl: 3.75rem;   /* 60px */
+
+  /* Вес шрифтов */
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+}

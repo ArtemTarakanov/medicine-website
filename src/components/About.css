@@ -41,10 +41,10 @@
 }
 
 .about-list-item {
-    position: relative; /* ← добавь это */
+    position: relative;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 2.25rem; /* лучше padding, а не margin */
+    padding-left: 2.25rem;
     font-size: 1.0625rem;
     color: var(--color-secondary);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -56,7 +56,7 @@
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%); /* ← центрирует по вертикали */
+    transform: translateY(-50%);
     color: var(--color-primary);
     font-weight: var(--font-weight-700);
     width: 1.5rem;

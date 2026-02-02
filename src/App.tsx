@@ -2,6 +2,9 @@ import './index.css';
 import Header from "./components/Header.tsx";
 import BackgroundEffects from "./components/BackgroundEffects.tsx";
 import Hero from "./components/Hero.tsx";
+import Steps from "./components/Steps.tsx";
+import About from "./components/About";
+import Services from "./components/Services.tsx";
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
           <div className="container">
               <Header/>
               <Hero/>
+              <Steps/>
+              <About/>
+              <Services/>
           </div>
       </>
   );

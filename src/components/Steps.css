@@ -1,0 +1,64 @@
+.steps-heading{
+    font-family: var(--font-primary);
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: var(--font-weight-600);
+    color: #1A1A2E;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.steps-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3.75rem;
+}
+
+.step-card{
+    background-color: var(--color-white);
+    border-radius: var(--spacing-md);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.card-number-container {
+    width: 5rem;
+    height: 5rem;
+    border-radius: var(--spacing-md);
+    background: linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 100%);
+    box-shadow: 0 4px 20px rgba(64, 163, 248, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.card-number {
+    font-size: 2rem;
+    font-weight: var(--font-weight-700);
+    font-family: var(--font-secondary);
+    font-weight: 400;
+}
+
+.card-heading{
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-600);
+    color: #1A1A2E;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-primary);
+}
+
+.card-subheading{
+    font-size: 1rem;
+    color: #718096;
+    line-height: 1.6;
+    font-family: var(--font-secondary);
+}
+
+@media (max-width: 48rem){
+    .steps-cards{
+        grid-template-columns: 1fr;
+
+    }
+}

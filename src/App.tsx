@@ -5,6 +5,7 @@ import Hero from "./components/Hero.tsx";
 import Steps from "./components/Steps.tsx";
 import About from "./components/About";
 import Services from "./components/Services.tsx";
+import Online from "./components/Online";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <Steps/>
               <About/>
               <Services/>
+              <Online/>
           </div>
       </>
   );

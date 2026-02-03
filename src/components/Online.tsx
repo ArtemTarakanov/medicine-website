@@ -41,7 +41,7 @@ export default function Online() {
                 <p className="price">{ONLINE_CONTENT.price}</p>
                 <p className="coast-number">{ONLINE_CONTENT.coast}</p>
                 <p className="time">{ONLINE_CONTENT.time}</p>
-                <a href="https://t.me/..." target="_blank" rel="noopener noreferrer" className="online-button">
+                <a href="https://t.me/gingerdumb" target="_blank" rel="noopener noreferrer" className="online-button">
                     {ONLINE_CONTENT.button}
                 </a>
             </div>

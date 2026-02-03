@@ -1,0 +1,211 @@
+/* Секция очного приёма */
+.offline-section {
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.offline-content {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.offline-heading {
+    font-family: var(--font-primary);
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: var(--font-weight-600);
+    color: var(--color-text);
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.offline-subheading {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    color: var(--color-secondary);
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.accordion-wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.accordion-item {
+    background: var(--color-white);
+    border-radius: 16px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 24px 32px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: var(--font-weight-600);
+    color: var(--color-text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background: rgba(64, 163, 248, 0.03);
+}
+
+.accordion-icon {
+    color: var(--color-primary);
+    transition: transform 0.3s;
+    font-size: 14px;
+}
+
+.accordion-icon.open {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0 32px 24px;
+    margin: 0;
+}
+
+.service-list-item {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    color: var(--color-secondary);
+    position: relative;
+    padding-left: 24px;
+}
+
+.service-list-item::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+
+.service-list-item:last-child {
+    border-bottom: none;
+}
+
+
+.offline-price {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 40px;
+}
+
+
+.offline-coast {
+    font-family: var(--font-primary);
+    font-size: 42px;
+    font-weight: var(--font-weight-700);
+    color: var(--color-text);
+    margin: 0 0 8px;
+    line-height: 1;
+}
+
+.offline-price-subtext {
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    color: #718096;
+    margin: 0 0 24px;
+    line-height: 1.6;
+}
+
+
+.offline-button {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-600);
+    font-size: 15px;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    letter-spacing: -0.01em;
+    width: 100%;
+    background: #FFE066;
+    color: var(--color-text);
+    box-shadow: 0 4px 20px rgba(255, 224, 102, 0.3);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+}
+
+
+@media (max-width: 768px) {
+    .offline-section {
+        padding: 40px 0;
+
+    }
+
+    .service-list {
+        padding: 0 24px 20px;
+    }
+
+    .service-list-item {
+        font-size: 15px;
+        padding: 10px 0;
+        padding-left: 20px;
+    }
+
+    .offline-price {
+        padding: 28px;
+    }
+
+    .offline-coast {
+        font-size: 32px;
+    }
+
+    .offline-price-subtext {
+        font-size: 14px;
+    }
+
+    .offline-button {
+        font-size: 14px;
+        padding: 14px 24px;
+    }
+}
+

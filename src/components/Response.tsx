@@ -27,7 +27,7 @@ const responseData = [
 
 export default function Response() {
     return (
-        <section id="reviews" className="response-section">
+        <section className="response-section" id = "response">
             <div className="container">
                 <div className="response-content">
                     <h2 className="response-header">{RESPONSE_CONTENT.heading}</h2>

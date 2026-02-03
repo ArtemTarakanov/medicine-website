@@ -21,7 +21,7 @@ export default function Footer() {
                             <li><a href="#services">Услуги</a></li>
                             <li><a href="#online">Онлайн-консультация</a></li>
                             <li><a href="#offline">Очный приём</a></li>
-                            <li><a href="#reviews">Отзывы</a></li>
+                            <li><a href="#response">Отзывы</a></li>
                         </ul>
                     </div>
 
@@ -30,16 +30,16 @@ export default function Footer() {
                         <ul className="footer-links">
                             <li><a href="tel:+79152603008">+7 (915) 260-30-08</a></li>
                             <li><a href="mailto:Akamynina4@yandex.ru">Akamynina4@yandex.ru</a></li>
-                            <li>Клиника «Семейный доктор»</li>
+                            <li><a href="https://www.fdoctor.ru/vrach-kamynina-anastasiya-viktorovna/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAPq6UVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacoD9LfqAWDYWwktxEp5sZMVMNfbnJqk48XSMb-xIy93akfcEDt_dfkkXkw-g_aem_pg2IWmfnx4BiGF0sAM9eXg">Клиника «Семейный доктор»</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-links-column">
                         <h3 className="footer-title">Документы</h3>
                         <ul className="footer-links">
-                            <li><a href="/privacy-policy">Политика конфиденциальности</a></li>
-                            <li><a href="/offer">Оферта на услуги</a></li>
-                            <li><a href="/consent">Согласие на обработку ПД</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Оферта</a></li>
+                            <li><a href="#">Согласие на ПД</a></li>
                         </ul>
                     </div>
                 </div>
@@ -57,9 +57,9 @@ export default function Footer() {
                         © {new Date().getFullYear()} Камынина А.В., ИНН 263014283220 — Все права защищены.
                     </div>
                     <div className="footer-docs">
-                        <a href="/privacy-policy">Политика конфиденциальности</a>
-                        <a href="/offer">Оферта</a>
-                        <a href="/consent">Согласие на ПД</a>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Оферта</a>
+                        <a href="#">Согласие на ПД</a>
                     </div>
                 </div>
             </div>

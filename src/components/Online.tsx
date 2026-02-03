@@ -19,7 +19,7 @@ const ONLINE_CONTENT = {
 
 export default function Online() {
     return (
-        <section className="online-section">
+        <section className="online-section" id = 'online'>
             <div className="online-content">
                 <h2 className="online-heading">{ONLINE_CONTENT.heading}</h2>
                 <p className="online-subheading">{ONLINE_CONTENT.subheading}</p>

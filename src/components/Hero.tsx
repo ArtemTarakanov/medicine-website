@@ -23,8 +23,22 @@ export default function Hero(){
 
 
                 <div className="hero-buttons">
-                    <button type="button" className="btn-online">{HERO_CONTENT.onlineButton}</button>
-                    <button type="button" className="btn-offline">{HERO_CONTENT.offlineButton}</button>
+                    <a
+                        href="https://t.me/gingerdumb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-online"
+                    >
+                        {HERO_CONTENT.onlineButton}
+                    </a>
+                    <a
+                        href="https://www.fdoctor.ru/vrach-kamynina-anastasiya-viktorovna/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAPq6UVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacoD9LfqAWDYWwktxEp5sZMVMNfbnJqk48XSMb-xIy93akfcEDt_dfkkXkw-g_aem_pg2IWmfnx4BiGF0sAM9eXg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-offline"
+                    >
+                        {HERO_CONTENT.offlineButton}
+                    </a>
                 </div>
 
             </div>

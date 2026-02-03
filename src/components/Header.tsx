@@ -9,28 +9,35 @@ export default function Header(){
             <ul className ='nav'>
 
                 <li className ='nav-item'>
-                    <a href = '#' className="about-me">О враче</a>
+                    <a href = '#about' className="about-me">О враче</a>
                 </li>
 
                 <li className ='nav-item'>
-                    <a href = '#' className="services">Услуги</a>
+                    <a href = '#services' className="services">Услуги</a>
                 </li>
 
                 <li className ='nav-item'>
-                    <a href = '#' className="online">Онлайн</a>
+                    <a href = '#online' className="online">Онлайн</a>
                 </li>
 
                 <li className ='nav-item'>
-                    <a href = '#' className="appointment">Приём</a>
+                    <a href = '#offline' className="appointment">Приём</a>
                 </li>
 
                 <li className ='nav-item'>
-                    <a href = '#' className="comments">Отзывы</a>
+                    <a href = '#response' className="comments">Отзывы</a>
                 </li>
 
             </ul>
 
-            <button className = 'logo-signup'>Записаться</button>
+            <a
+                href="https://t.me/gingerdumb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="logo-signup"
+            >
+                Записаться
+            </a>
 
         </header>
     )

@@ -35,7 +35,7 @@ const servicesData = [
 
 export default function Services() {
     return (
-        <section className="services">
+        <section className="services" id = "services">
             <h2 className="services-heading">С какими запросами обращаются</h2>
 
             <div className="services-grid">

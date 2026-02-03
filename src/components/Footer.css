@@ -68,6 +68,15 @@
     display: inline-block;
 }
 
+.footer-links {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 0.9375rem;
+    font-family: var(--font-secondary);
+    transition: color 0.3s;
+    display: inline-block;
+}
+
 .footer-links a:hover {
     color: var(--color-primary);
 }

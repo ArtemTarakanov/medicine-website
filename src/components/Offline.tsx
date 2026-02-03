@@ -26,7 +26,7 @@ export default function Offline() {
     };
 
     return (
-        <section className="offline-section">
+        <section className="offline-section" id = 'offline'>
             <div className="container">
                 <div className="offline-content">
                     <h2 className="offline-heading">{OFFLINE_CONTENT.heading}</h2>
@@ -69,7 +69,7 @@ export default function Offline() {
                     <p className="offline-coast">{OFFLINE_CONTENT.coast}</p>
                     <p className="offline-price-subtext">{OFFLINE_CONTENT.priceSubText}</p>
                     <a
-                        href="tel:+79999999999"
+                        href="https://www.fdoctor.ru/vrach-kamynina-anastasiya-viktorovna/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAPq6UVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacoD9LfqAWDYWwktxEp5sZMVMNfbnJqk48XSMb-xIy93akfcEDt_dfkkXkw-g_aem_pg2IWmfnx4BiGF0sAM9eXg"
                         className="offline-button btn-accent"
                     >
                         {OFFLINE_CONTENT.offlineButton}

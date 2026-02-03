@@ -13,7 +13,7 @@ const ABOUT_CONTENT = {
 
 export default function About(){
     return(
-        <div className = "about">
+        <div className = "about" id="about">
 
             <div className = "about-image">
                 <img src = 'public/images/doctor_2.jpg' alt = 'doctor' className = "doctor-image-about"></img>
@@ -28,7 +28,14 @@ export default function About(){
                     <li className = "about-list-item">{ABOUT_CONTENT.listItem3}</li>
                     <li className = "about-list-item">{ABOUT_CONTENT.listItem4}</li>
                 </ul>
-                <button type={"button"} className = "about-btn">{ABOUT_CONTENT.aboutButton}</button>
+                <a
+                    href="https://t.me/gingerdumb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="logo-signup"
+                >
+                    Записаться
+                </a>
             </div>
 
         </div>

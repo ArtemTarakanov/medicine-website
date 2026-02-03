@@ -7,6 +7,8 @@ import About from "./components/About";
 import Services from "./components/Services.tsx";
 import Online from "./components/Online";
 import Offline from "./components/Offline";
+import Response from "./components/Response";
+import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
               <Services/>
               <Online/>
               <Offline/>
+              <Response/>
+              <Footer/>
           </div>
       </>
   );

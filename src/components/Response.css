@@ -1,0 +1,153 @@
+.response-section {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    width: 100%;
+}
+
+.response-header {
+    font-family: var(--font-primary);
+    font-size: clamp(2rem, 4vw, 2.625rem);
+    font-weight: var(--font-weight-600);
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+.response-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+    align-items: stretch;
+}
+
+.response-card {
+    background-color: var(--color-white);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 2rem rgba(31, 38, 135, 0.07);
+    position: relative;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    display: flex;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -0.75rem;
+    right: 2rem;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-family: Georgia, serif;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #60A5FA 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.25rem 0.75rem rgba(64, 163, 248, 0.3);
+}
+
+.card-content {
+    padding: 2.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.stars {
+    color: #F59E0B;
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-500);
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-family: var(--font-secondary);
+    flex: 1;
+}
+
+.name {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-600);
+    font-size: 1.125rem;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+}
+
+.nameRole {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: var(--font-weight-500);
+    font-family: var(--font-secondary);
+}
+
+@media (max-width: 1024px) {
+    .response-section {
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
+    }
+
+    .response-header {
+        font-size: 2rem;
+    }
+
+    .response-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .response-section {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .response-header {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .response-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .quote-icon {
+        top: -0.5rem;
+        right: 1.5rem;
+        font-size: 1.25rem;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+
+    .stars {
+        font-size: 0.875rem;
+        letter-spacing: 0.0625rem;
+    }
+
+    .description {
+        font-size: 0.9375rem;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+    .nameRole {
+        font-size: 0.8125rem;
+    }
+}

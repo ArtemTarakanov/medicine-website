@@ -34,14 +34,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="footer-links-column">
-                        <h3 className="footer-title">Документы</h3>
-                        <ul className="footer-links">
-                            <li><a href="#">Политика конфиденциальности</a></li>
-                            <li><a href="#">Оферта</a></li>
-                            <li><a href="#">Согласие на ПД</a></li>
-                        </ul>
-                    </div>
                 </div>
 
                 <div className="legal-disclaimer">

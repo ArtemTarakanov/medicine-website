@@ -16,7 +16,7 @@
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3.75rem;
     margin-bottom: 3.75rem;
 }
@@ -166,6 +166,14 @@
 
     }
 
+    .footer-brand{
+        text-align: center;
+    }
+
+    .footer-links-column{
+        text-align: center;
+    }
+
 
 }
 
@@ -203,5 +211,13 @@
 
     .footer-docs a {
         font-size: 0.9375rem;
+    }
+
+    .footer-brand{
+        text-align: center;
+    }
+
+    .footer-links-column{
+        text-align: center;
     }
 }

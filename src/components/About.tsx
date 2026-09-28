@@ -1,4 +1,5 @@
 import './About.css';
+import { useInView } from '../hooks/useInView';
 
 const ABOUT_CONTENT = {
     heading: "Коротко обо мне",
@@ -11,44 +12,35 @@ const ABOUT_CONTENT = {
     experience2: "Клиника «Семейный доктор» (с 2023 года)",
     experience3: "3 года клинического опыта",
     experience4: "Действующая аккредитация по специальности",
-    aboutButton: "Записаться на приём"
-
 }
 
 export default function About(){
-    return(
-        <div className = "about" id="about">
+    const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.1 });
 
-            <div className = "about-image">
-                <img src = '/images/doctor_2.jpg' alt = 'doctor' className = "doctor-image-about"></img>
+    return(
+        <div className="about" id="about" ref={ref}>
+
+            <div className={`about-image reveal-left${inView ? ' is-visible' : ''}`}>
+                <img src='/images/doctor_2.jpg' alt='doctor' className="doctor-image-about"/>
             </div>
 
-            <div className = "about-content">
-                <h1 className = "about-heading">{ABOUT_CONTENT.heading}</h1>
-                <h2 className = "about-description">{ABOUT_CONTENT.description}</h2>
+            <div className={`about-content reveal-right${inView ? ' is-visible' : ''}`} style={{ transitionDelay: '0.15s' }}>
+                <h1 className="about-heading">{ABOUT_CONTENT.heading}</h1>
+                <h2 className="about-description">{ABOUT_CONTENT.description}</h2>
                 
-                <h3 className = "about-subheading">{ABOUT_CONTENT.educationHeading}</h3>
-                <ul className = "about-list">
-                    <li className = "about-list-item">{ABOUT_CONTENT.education1}</li>
-                    <li className = "about-list-item">{ABOUT_CONTENT.education2}</li>
+                <h3 className="about-subheading">{ABOUT_CONTENT.educationHeading}</h3>
+                <ul className="about-list">
+                    <li className="about-list-item">{ABOUT_CONTENT.education1}</li>
+                    <li className="about-list-item">{ABOUT_CONTENT.education2}</li>
                 </ul>
 
-                <h3 className = "about-subheading">{ABOUT_CONTENT.experienceHeading}</h3>
-                <ul className = "about-list">
-                    <li className = "about-list-item">{ABOUT_CONTENT.experience1}</li>
-                    <li className = "about-list-item">{ABOUT_CONTENT.experience2}</li>
-                    <li className = "about-list-item">{ABOUT_CONTENT.experience3}</li>
-                    <li className = "about-list-item">{ABOUT_CONTENT.experience4}</li>
+                <h3 className="about-subheading">{ABOUT_CONTENT.experienceHeading}</h3>
+                <ul className="about-list">
+                    <li className="about-list-item">{ABOUT_CONTENT.experience1}</li>
+                    <li className="about-list-item">{ABOUT_CONTENT.experience2}</li>
+                    <li className="about-list-item">{ABOUT_CONTENT.experience3}</li>
+                    <li className="about-list-item">{ABOUT_CONTENT.experience4}</li>
                 </ul>
-                
-                <a
-                    href="https://t.me/gingerdumb"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="logo-signup"
-                >
-                    Записаться
-                </a>
             </div>
 
         </div>

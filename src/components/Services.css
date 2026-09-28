@@ -1,12 +1,12 @@
 .services {
-    padding: 6.25rem 0; /* 100px */
+    padding: 3rem 0 6.25rem;
 }
 
 .services-heading {
     font-family: var(--font-primary);
-    font-size: clamp(2rem, 4vw, 2.625rem); /* 32–42px */
+    font-size: clamp(2rem, 4vw, 2.625rem);
     font-weight: var(--font-weight-600);
-    color: #1A1A2E;
+    color: var(--color-text);
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -23,6 +23,10 @@
     border-radius: 1.25rem;
     padding: 2.5rem;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-card-content {
@@ -46,7 +50,7 @@
 .service-card-title {
     font-family: var(--font-primary);
     font-size: 1.25rem;
-    color: #1A1A2E;
+    color: var(--color-text);
     font-weight: var(--font-weight-600);
     margin: 0;
 }
@@ -54,14 +58,33 @@
 .service-card-description {
     font-family: var(--font-secondary);
     font-size: 1rem;
-    color: #718096;
+    color: var(--color-secondary);
     line-height: 1.6;
     margin: 0;
 }
 
+.reveal.is-visible .service-card--1 { opacity: 1; transform: none; transition-delay: 0.05s; }
+.reveal.is-visible .service-card--2 { opacity: 1; transform: none; transition-delay: 0.1s; }
+.reveal.is-visible .service-card--3 { opacity: 1; transform: none; transition-delay: 0.15s; }
+.reveal.is-visible .service-card--4 { opacity: 1; transform: none; transition-delay: 0.2s; }
+.reveal.is-visible .service-card--5 { opacity: 1; transform: none; transition-delay: 0.25s; }
+.reveal.is-visible .service-card--6 { opacity: 1; transform: none; transition-delay: 0.3s; }
 
 @media (max-width: 48rem) {
     .services-grid {
         grid-template-columns: 1fr;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .service-card { transition: none; opacity: 1; transform: none; }
+}
+
+[data-theme="dark"] .service-card {
+    background-color: #1E293B;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .service-card-emoji {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
 }

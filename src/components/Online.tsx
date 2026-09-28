@@ -1,4 +1,5 @@
 import './Online.css';
+import { useInView } from '../hooks/useInView';
 
 const ONLINE_CONTENT = {
     heading: 'Онлайн-консультация ЛОР-врача',
@@ -7,44 +8,56 @@ const ONLINE_CONTENT = {
     description2: 'Разбор предоставленных обследований',
     description3: 'Рекомендации по дальнейшим очным шагам',
     description4: 'Подчёркивание необходимости очной консультации при необходимости',
-
     importantHeading: 'Важно',
     importantSubheading: 'Консультация не является медицинской услугой, не заменяет очный приём врача, не включает диагностику и лечение. Вся информация носит ознакомительный характер.',
-
+    docsHeading: 'Обязательно ознакомьтесь с документами',
+    docsText: 'Перед записью ознакомьтесь с размещёнными на сайте документами: согласие на обработку персональных данных, политика конфиденциальности и оферта.',
     price: "Стоимость",
-    coast: '2000 ₽',
+    coast: '3 000 ₽',
     time: 'Длительность: 30–60 минут',
     button: 'Записаться на онлайн-консультацию (Telegram)',
 }
 
 export default function Online() {
+    const { ref, inView } = useInView<HTMLElement>({ threshold: 0.1 });
+
     return (
-        <section className="online-section" id = 'online'>
-            <div className="online-content">
-                <h2 className="online-heading">{ONLINE_CONTENT.heading}</h2>
-                <p className="online-subheading">{ONLINE_CONTENT.subheading}</p>
+        <section className={`online-section reveal${inView ? ' is-visible' : ''}`} id="online" ref={ref}>
+            <div className="online-top">
+                <div className="online-content">
+                    <h2 className="online-heading">{ONLINE_CONTENT.heading}</h2>
+                    <p className="online-subheading">{ONLINE_CONTENT.subheading}</p>
 
-                <ul className="online-list">
-                    <li className="online-list-item">{ONLINE_CONTENT.description1}</li>
-                    <li className="online-list-item">{ONLINE_CONTENT.description2}</li>
-                    <li className="online-list-item">{ONLINE_CONTENT.description3}</li>
-                    <li className="online-list-item">{ONLINE_CONTENT.description4}</li>
-                </ul>
+                    <ul className="online-list">
+                        <li className="online-list-item">{ONLINE_CONTENT.description1}</li>
+                        <li className="online-list-item">{ONLINE_CONTENT.description2}</li>
+                        <li className="online-list-item">{ONLINE_CONTENT.description3}</li>
+                        <li className="online-list-item">{ONLINE_CONTENT.description4}</li>
+                    </ul>
 
-                <div className="important">
-                    <p className="important-heading">{ONLINE_CONTENT.importantHeading}</p>
-                    <p className="important-description">{ONLINE_CONTENT.importantSubheading}</p>
+                    <div className="important">
+                        <p className="important-heading">{ONLINE_CONTENT.importantHeading}</p>
+                        <p className="important-description">{ONLINE_CONTENT.importantSubheading}</p>
+                    </div>
+                </div>
+
+                <div className="price-container">
+                    <p className="price">{ONLINE_CONTENT.price}</p>
+                    <p className="coast-number">{ONLINE_CONTENT.coast}</p>
+                    <p className="time">{ONLINE_CONTENT.time}</p>
                 </div>
             </div>
 
-            <div className="price-container">
-                <p className="price">{ONLINE_CONTENT.price}</p>
-                <p className="coast-number">{ONLINE_CONTENT.coast}</p>
-                <p className="time">{ONLINE_CONTENT.time}</p>
-                <a href="https://t.me/gingerdumb" target="_blank" rel="noopener noreferrer" className="online-button">
-                    {ONLINE_CONTENT.button}
-                </a>
+            <div className="online-docs-notice">
+                <span className="docs-icon">📄</span>
+                <p className="docs-text">
+                    <strong>{ONLINE_CONTENT.docsHeading}:</strong> {ONLINE_CONTENT.docsText}
+                </p>
             </div>
+
+            <a href="https://t.me/gingerdumb" target="_blank" rel="noopener noreferrer" className="online-button">
+                {ONLINE_CONTENT.button}
+            </a>
         </section>
     );
 }

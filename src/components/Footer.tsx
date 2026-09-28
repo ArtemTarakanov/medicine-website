@@ -1,8 +1,11 @@
 import './Footer.css';
+import { useInView } from '../hooks/useInView';
 
 export default function Footer() {
+    const { ref, inView } = useInView<HTMLElement>({ threshold: 0.05 });
+
     return (
-        <footer className="footer-section">
+        <footer className={`footer-section reveal${inView ? ' is-visible' : ''}`} ref={ref}>
             <div className="container">
                 <div className="footer-grid">
                     <div className="footer-brand">
@@ -14,7 +17,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="footer-links-column" id = "links-column">
+                    <div className="footer-links-column" id="links-column">
                         <h3 className="footer-title">Разделы</h3>
                         <ul className="footer-links">
                             <li><a href="#about">О враче</a></li>
@@ -33,7 +36,6 @@ export default function Footer() {
                             <li><a href="https://www.fdoctor.ru/vrach-kamynina-anastasiya-viktorovna/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAPq6UVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacoD9LfqAWDYWwktxEp5sZMVMNfbnJqk48XSMb-xIy93akfcEDt_dfkkXkw-g_aem_pg2IWmfnx4BiGF0sAM9eXg">Клиника «Семейный доктор»</a></li>
                         </ul>
                     </div>
-
                 </div>
 
                 <div className="legal-disclaimer">

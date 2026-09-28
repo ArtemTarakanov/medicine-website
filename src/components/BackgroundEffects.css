@@ -41,3 +41,18 @@
     top: 40%;
     opacity: 0.3;
 }
+
+[data-theme="dark"] .orb-1 {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+    opacity: 0.5;
+}
+
+[data-theme="dark"] .orb-2 {
+    background: linear-gradient(135deg, #3d2e00 0%, #2a1f00 100%);
+    opacity: 0.3;
+}
+
+[data-theme="dark"] .orb-3 {
+    background: #0a2540;
+    opacity: 0.4;
+}

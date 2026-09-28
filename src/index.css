@@ -1,11 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(135deg, #F0F7FF 0%, #FFFFFF 50%, #F8FAFC 100%);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
 }
 
 .container {
@@ -15,30 +24,87 @@ body {
 }
 
 :root {
-  /* Цвета */
   --color-primary: #40A3F8;
   --color-secondary: #4A5568;
   --color-white: #FFFFFF;
   --color-text: #1e293b;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: rgba(255, 255, 255, 0.8);
+  --color-border: rgba(0, 0, 0, 0.05);
 
-  /* Шрифты */
   --font-primary: 'Montserrat', sans-serif;
   --font-secondary: 'Inter', sans-serif;
 
-  /* Размеры */
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2.5rem;
   --spacing-xl: 3.75rem;
 
-  /* Шрифты */
-  --font-size-sm: 0.9375rem; /* 15px */
-  --font-size-md: 1.75rem;   /* 28px */
-  --font-size-lg: 2.5rem;    /* 40px */
-  --font-size-xl: 3.75rem;   /* 60px */
+  --font-size-sm: 0.9375rem;
+  --font-size-md: 1.75rem;
+  --font-size-lg: 2.5rem;
+  --font-size-xl: 3.75rem;
 
-  /* Вес шрифтов */
   --font-weight-500: 500;
   --font-weight-600: 600;
   --font-weight-700: 700;
+}
+
+[data-theme="dark"] {
+  --color-primary: #60B4FF;
+  --color-secondary: #CBD5E1;
+  --color-white: #1E293B;
+  --color-text: #F1F5F9;
+  --color-surface: #1E293B;
+  --color-surface-alt: rgba(30, 41, 59, 0.9);
+  --color-border: rgba(255, 255, 255, 0.07);
+  color-scheme: dark;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(2.5rem);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-2.5rem);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(2.5rem);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -1,4 +1,3 @@
-/* Секция очного приёма */
 .offline-section {
     padding: 100px 0;
 }
@@ -27,10 +26,8 @@
     font-family: var(--font-secondary);
     font-size: 18px;
     color: var(--color-secondary);
-    margin: 0;
+    margin: 0 auto;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.7;
 }
 
@@ -92,7 +89,7 @@
 }
 
 .service-list-item {
-    padding: 12px 0;
+    padding: 12px 0 12px 24px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
@@ -101,7 +98,6 @@
     font-size: 16px;
     color: var(--color-secondary);
     position: relative;
-    padding-left: 24px;
 }
 
 .service-list-item::before {
@@ -118,14 +114,57 @@
     border-bottom: none;
 }
 
-
 .offline-price {
     max-width: 500px;
-    margin: 40px auto;
+    margin: 40px auto 0;
     text-align: center;
     padding: 40px;
 }
 
+.offline-address {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+
+.offline-address-label {
+    font-family: var(--font-secondary);
+    font-size: 0.8125rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.offline-address-metro {
+    font-family: var(--font-primary);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.metro-icon {
+    font-size: 1.125rem;
+}
+
+.offline-address-street {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.offline-cta {
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+}
 
 .offline-coast {
     font-family: var(--font-primary);
@@ -139,11 +178,10 @@
 .offline-price-subtext {
     font-family: var(--font-secondary);
     font-size: 15px;
-    color: #718096;
-    margin: 0 0 24px;
+    color: var(--color-secondary);
+    margin: 0;
     line-height: 1.6;
 }
-
 
 .offline-button {
     font-family: var(--font-primary);
@@ -166,6 +204,12 @@
     box-shadow: 0 4px 20px rgba(255, 224, 102, 0.3);
 }
 
+.offline-button:hover {
+    background: #ffd93d;
+    box-shadow: 0 6px 28px rgba(255, 224, 102, 0.5);
+    transform: translateY(-1px);
+}
+
 .glass-card {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
@@ -174,33 +218,61 @@
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
 }
 
-
 @media (max-width: 768px) {
     .offline-section {
         padding: 40px 0;
+    }
 
+    .offline-heading {
+        font-size: clamp(26px, 6vw, 32px);
+    }
+
+    .offline-subheading {
+        font-size: 16px;
+    }
+
+    .accordion-wrapper {
+        margin: 24px auto;
+    }
+
+    .accordion-header {
+        padding: 18px 20px;
+        font-size: 16px;
     }
 
     .service-list {
-        padding: 0 24px 20px;
+        padding: 0 20px 16px;
     }
 
     .service-list-item {
         font-size: 15px;
-        padding: 10px 0;
-        padding-left: 20px;
+        padding: 10px 0 10px 20px;
     }
 
     .offline-price {
-        padding: 28px;
+        padding: 24px 20px;
+        margin: 24px auto 0;
     }
 
     .offline-coast {
-        font-size: 32px;
+        font-size: 2.25rem;
     }
 
     .offline-price-subtext {
         font-size: 14px;
+    }
+
+    .offline-address {
+        margin-top: 1.25rem;
+        padding-top: 1.25rem;
+    }
+
+    .offline-address-metro {
+        font-size: 1rem;
+    }
+
+    .offline-cta {
+        margin: 1.25rem auto 0;
     }
 
     .offline-button {
@@ -209,3 +281,32 @@
     }
 }
 
+[data-theme="dark"] .accordion-item {
+    background: #1E293B;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .accordion-header:hover {
+    background: rgba(96, 180, 255, 0.05);
+}
+
+[data-theme="dark"] .service-list-item {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .glass-card {
+    background: rgba(30, 41, 59, 0.85);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .offline-button {
+    background: #D4A017;
+    color: #0F172A;
+    box-shadow: 0 4px 20px rgba(212, 160, 23, 0.3);
+}
+
+[data-theme="dark"] .offline-button:hover {
+    background: #E5B520;
+    box-shadow: 0 6px 28px rgba(212, 160, 23, 0.5);
+}

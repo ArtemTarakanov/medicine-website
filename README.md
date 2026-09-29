@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Посмотреть Демо](https://medicine-website-ten.vercel.app/) 
+[Посмотреть Демо](https://lor-doctor.vercel.app/) 
 
 ## Основные функции
 

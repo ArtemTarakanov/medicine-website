@@ -1,98 +1,214 @@
-.about-heading {
-    font-family: var(--font-primary);
-    font-size: clamp(32px, 4vw, 42px);
-    font-weight: var(--font-weight-600);
-    color: var(--color-text);
-    text-align: left;
-    margin-bottom: 1.5rem;
-}
-
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    margin-top: 6.25rem;
-    margin-bottom: 3rem;
-    align-items: center;
+    gap: 4rem;
+    padding: 4rem 0 5rem;
+    align-items: start;
+}
+
+/* ── Левая колонка с фото ── */
+.about-visual {
+    position: relative;
+}
+
+.about-image-wrap {
+    border-radius: 2rem;
+    overflow: hidden;
+    height: 38rem;
+    position: relative;
+}
+
+.about-image-inner {
+    width: 100%;
+    height: 115%;
+    margin-top: -7.5%;
+    will-change: transform;
+    transition: transform 0.1s linear;
 }
 
 .doctor-image-about {
     width: 100%;
-    height: 40rem;
+    height: 100%;
     object-fit: cover;
-    border-radius: 2.5rem;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    object-position: top center;
+    display: block;
+}
+
+.about-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(13, 27, 46, 0.5) 100%
+    );
+}
+
+/* ── Правая колонка ── */
+.about-content {
+    padding-top: 1rem;
+}
+
+.about-tag {
+    font-family: var(--font-secondary);
+    font-size: 0.6875rem;
+    font-weight: var(--font-weight-700);
+    letter-spacing: 0.15em;
+    color: var(--color-primary);
+    margin-bottom: 0.875rem;
+}
+
+.about-heading {
+    font-family: var(--font-primary);
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: var(--font-weight-800);
+    color: var(--color-text);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+
+.about-accent-line {
+    width: 2.5rem;
+    height: 3px;
+    background: var(--color-yellow);
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
 }
 
 .about-description {
     font-family: var(--font-secondary);
-    font-size: 1.125rem;
-    line-height: 1.7rem;
-    color: var(--color-secondary);
-    margin-bottom: 2rem;
-    font-weight: var(--font-weight-500);
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
 }
 
-.about-subheading {
-    font-family: var(--font-primary);
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-600);
-    color: var(--color-text);
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.about-list {
-    list-style: none;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.about-list-item {
-    position: relative;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2.25rem;
-    font-size: 1.0625rem;
-    color: var(--color-secondary);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    font-family: var(--font-secondary);
-}
-
-.about-list-item::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-primary);
-    font-weight: var(--font-weight-700);
-    width: 1.5rem;
-    height: 1.5rem;
-    background: rgba(64, 163, 248, 0.1);
-    border-radius: 50%;
+/* Timeline */
+.about-timeline {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.875rem;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.about-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.4rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), rgba(64, 163, 248, 0.1));
+}
+
+.about-timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.875rem 0;
+    position: relative;
+    opacity: 0;
+    transform: translateX(1rem);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right.is-visible .about-timeline-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-timeline-dot {
+    position: absolute;
+    left: -1.75rem;
+    top: 1.125rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    flex-shrink: 0;
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.about-timeline-item--edu .about-timeline-dot {
+    background: var(--color-primary);
+}
+
+.about-timeline-item--work .about-timeline-dot {
+    background: var(--color-yellow);
+    box-shadow: 0 0 0 2px var(--color-yellow);
+}
+
+.about-timeline-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.875rem 1.25rem;
+    background: var(--color-white);
+    border-radius: 0.875rem;
+    border: 1px solid rgba(64, 163, 248, 0.08);
+    box-shadow: 0 2px 12px rgba(31, 38, 135, 0.04);
+    flex: 1;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-timeline-body:hover {
+    border-color: rgba(64, 163, 248, 0.2);
+    box-shadow: 0 6px 24px rgba(64, 163, 248, 0.08);
+}
+
+.about-timeline-year {
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-700);
+    color: var(--color-primary);
+    letter-spacing: 0.05em;
+}
+
+.about-timeline-item--work .about-timeline-year {
+    color: #92680A;
+}
+
+.about-timeline-text {
+    font-family: var(--font-secondary);
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    line-height: 1.5;
 }
 
 @media (max-width: 48rem) {
     .about {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 4rem;
+        padding: 3rem 0 4rem;
     }
 
-    .about-image {
-        order: -1;
+    .about-image-wrap {
+        height: 22rem;
+    }
+
+    .about-stats {
+        gap: 0.5rem;
+    }
+
+    .about-stat {
+        padding: 0.625rem 0.5rem;
+    }
+
+    .about-stat__value {
+        font-size: 1.125rem;
     }
 }
 
-[data-theme="dark"] .about-list-item {
-    border-bottom-color: rgba(255, 255, 255, 0.05);
-}
-
-[data-theme="dark"] .about-list-item::before {
-    background: rgba(96, 180, 255, 0.15);
+@media (prefers-reduced-motion: reduce) {
+    .about-image-inner {
+        transition: none;
+        transform: none !important;
+    }
+    .about-timeline-item {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
 }

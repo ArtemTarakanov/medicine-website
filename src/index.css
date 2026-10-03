@@ -9,12 +9,8 @@ html, body {
 }
 
 body {
-  background: linear-gradient(135deg, #F0F7FF 0%, #FFFFFF 50%, #F8FAFC 100%);
+  background: #F8FAFF;
   transition: background 0.4s ease, color 0.4s ease;
-}
-
-[data-theme="dark"] body {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
 }
 
 .container {
@@ -23,14 +19,26 @@ body {
   padding: 0 24px;
 }
 
+.hero-section {
+  background: linear-gradient(160deg, #0D1B2E 0%, #112240 60%, #0D1B2E 100%);
+  width: 100%;
+}
+
 :root {
   --color-primary: #40A3F8;
+  --color-primary-glow: rgba(64, 163, 248, 0.25);
   --color-secondary: #4A5568;
   --color-white: #FFFFFF;
-  --color-text: #1e293b;
+  --color-text: #1E293B;
+  --color-text-muted: #64748B;
   --color-surface: #FFFFFF;
-  --color-surface-alt: rgba(255, 255, 255, 0.8);
-  --color-border: rgba(0, 0, 0, 0.05);
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-yellow: #FFE066;
+
+  --color-hero-bg: #0D1B2E;
+  --color-hero-mid: #112240;
+  --color-hero-text: #F1F5F9;
+  --color-hero-accent: #40A3F8;
 
   --font-primary: 'Montserrat', sans-serif;
   --font-secondary: 'Inter', sans-serif;
@@ -48,17 +56,7 @@ body {
   --font-weight-500: 500;
   --font-weight-600: 600;
   --font-weight-700: 700;
-}
-
-[data-theme="dark"] {
-  --color-primary: #60B4FF;
-  --color-secondary: #CBD5E1;
-  --color-white: #1E293B;
-  --color-text: #F1F5F9;
-  --color-surface: #1E293B;
-  --color-surface-alt: rgba(30, 41, 59, 0.9);
-  --color-border: rgba(255, 255, 255, 0.07);
-  color-scheme: dark;
+  --font-weight-800: 800;
 }
 
 .reveal {
@@ -107,4 +105,28 @@ body {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D1B2E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #40A3F8, #93C5FD, #FFE066);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2993e8, #60B4FF, #FFC107);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #40A3F8 #0D1B2E;
 }
